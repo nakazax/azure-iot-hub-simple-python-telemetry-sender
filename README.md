@@ -1,1 +1,1 @@
-# iot-hub-simple-python-telemetry-sender
+# Azure IoT Hub Simple Python Telemetry Sender
