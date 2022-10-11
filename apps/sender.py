@@ -1,5 +1,6 @@
 # A script for sending Raspberry Pi simulated data to Azure IoT Hub
 import argparse
+import json
 import random
 import time
 
@@ -24,12 +25,12 @@ def main(conn_str: str, message_id: int, interval_seconds: int) -> None:
 
 def send_message(device_client: IoTHubDeviceClient, message_id: int):
     """Send a message to the IoT Hub"""
-    message = {
+    message = json.dumps({
         "message_id": message_id,
         "deviceId": "IoT Hub Simple Python Telemetry Sender",
         "temperature": random.uniform(20, 32),
         "humidity": random.uniform(60, 80),
-    }
+    })
     print(f"Sending message: {message}")
     device_client.send_message(message)
 
