@@ -15,10 +15,10 @@ def main(conn_str: str, message_id: int, interval_seconds: int) -> None:
         try:
             send_message(device_client, message_id)
             message_id += 1
-            print(f"Waiting {interval_seconds} seconds...")
+            print(f"Waiting {interval_seconds} seconds...", flush=True)
             time.sleep(interval_seconds)
         except KeyboardInterrupt:
-            print("Stopping script")
+            print("Stopping script", flush=True)
             break
     device_client.disconnect()
 
@@ -31,7 +31,7 @@ def send_message(device_client: IoTHubDeviceClient, message_id: int):
         "temperature": random.uniform(20, 32),
         "humidity": random.uniform(60, 80),
     })
-    print(f"Sending message: {message}")
+    print(f"Sending message: {message}", flush=True)
     device_client.send_message(message)
 
 
