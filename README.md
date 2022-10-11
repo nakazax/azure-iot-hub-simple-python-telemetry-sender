@@ -1,1 +1,1 @@
-# template-vscode-remote-try-python-minimal
+# iot-hub-simple-python-telemetry-sender
