@@ -17,7 +17,7 @@ $ python3 ./azure-iot-hub-simple-python-telemetry-sender/apps/sender.py --connec
 
 - `--connection-string` (Required): Connection string for the IoT Hub.
 - `--interval-seconds` (Optional): Interval in seconds between sending messages. Default is `10` seconds.
-- `----message-id` (Optional): Starting message ID. Default is `1`.
+- `--message-id` (Optional): Starting message ID. Default is `1`.
 
 ### Optional: Background execution (for Linux)
 If backgroud execution is preffered, run the command with `nohup`.
