@@ -25,3 +25,13 @@ If backgroud execution is preffered, run the command with `nohup`.
 ```
 nohup python3 ./azure-iot-hub-simple-python-telemetry-sender/apps/sender.py --connection-string "HostName=example.azure-devices.net;DeviceId=myDeviceId;SharedAccessKey=xxx" > /dev/null 2>&1 &
 ```
+
+## Sample telemetry
+```
+{
+    "messageId": 1,
+    "deviceId": "IoT Hub Simple Python Telemetry Sender",
+    "temperature": 21.441061841774157,
+    "humidity": 66.37002537509804
+}
+```
